@@ -20,6 +20,54 @@ public class Array {
         }
     }
 
+//---------------------------------------------------------------------------------------------2nd Method-----------------------------------------------------------------------------------------------------------
 
+public class LargestElementInArray {
 
+    public static int findLargest(int[] arr) {
+        // Initialize the largest value as the smallest possible integer
+        int largest = Integer.MIN_VALUE;
 
+        // Traverse the array and find the largest element
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+        }
+
+        return largest;
+    }
+
+    public static void main(String[] args) {
+        // Test cases
+        int[] arr1 = {1, 8, 7, 56, 90};
+        int[] arr2 = {5, 5, 5, 5};
+        int[] arr3 = {10};
+
+        System.out.println("Largest element in arr1: " + findLargest(arr1));  // Output: 90
+        System.out.println("Largest element in arr2: " + findLargest(arr2));  // Output: 5
+        System.out.println("Largest element in arr3: " + findLargest(arr3));  // Output: 10
+    }
+}
+
+//---------------------------------------------------------------------------------------------3nd Method-----------------------------------------------------------------------------------------------------------
+
+class Solution {
+    public static int largest(int[] arr) {
+        // Brute force solution
+        // Arrays.sort(arr);
+        // return arr[arr.length-1];
+        // time complexity=0(nlogn);
+        
+        // better solution x
+        //optimal solution
+        
+        int largest=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            if(largest<arr[i]){
+                largest=arr[i];
+            }
+        }
+        return largest; //time complexity =o(n)
+    }
+}
